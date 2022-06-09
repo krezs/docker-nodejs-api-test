@@ -1,9 +1,8 @@
 import {Router} from "express";
+import { methods as categoryController } from "../controllers/category.controller";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-    res.send("Hello World category...")
-});
+router.get("/", categoryController.getCategories);
 
 export default router;
