@@ -13,6 +13,6 @@ app.set("port", 4000);
 app.use(morgan('dev'));
 
 //routes
-app.use(categoryRoutes);
+app.use("/api/category", categoryRoutes);
 
 export default app;
