@@ -1,15 +1,18 @@
 import express from "express";
 import morgan from "morgan";
 
+//Routes import
+import categoryRoutes from "./routes/category.routes";
+
 const app = express();
 
 //settings
 app.set("port", 4000);
 
-
 //middlewares
 app.use(morgan('dev'));
 
-// app.use(require('./routes/index'));
+//routes
+app.use(categoryRoutes);
 
 export default app;
